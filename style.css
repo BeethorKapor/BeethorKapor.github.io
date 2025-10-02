@@ -1,0 +1,282 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe5f0 50%, #ffd6e8 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            animation: float 8s infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 1s ease;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: #d4407c;
+            text-shadow: 2px 2px 4px rgba(212, 64, 124, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #ff69b4;
+            font-style: italic;
+        }
+
+        .countdown {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            animation: fadeIn 1s ease 0.5s backwards;
+        }
+
+        .countdown h2 {
+            color: #d4407c;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .time-unit {
+            background: linear-gradient(135deg, #ff69b4, #d4407c);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            min-width: 100px;
+        }
+
+        .time-value {
+            font-size: 3em;
+            font-weight: bold;
+            display: block;
+        }
+
+        .time-label {
+            font-size: 1em;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .age-section {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 2px dashed #ffd6e8;
+        }
+
+        .age-display {
+            font-size: 1.5em;
+            color: #d4407c;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .age-number-box {
+            display: inline-block;
+            font-size: 5em;
+            color: white;
+            font-weight: bold;
+            padding: 40px 60px;
+            background: linear-gradient(135deg, #ff69b4, #d4407c);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(212, 64, 124, 0.3);
+            min-width: 100px;
+            transition: all 0.3s ease;
+        }
+
+        .age-number-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(212, 64, 124, 0.4);
+        }
+
+        .love-message {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease 1s backwards;
+        }
+
+        .love-message h2 {
+            color: #d4407c;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        .love-message p {
+            font-size: 1.3em;
+            line-height: 1.8;
+            color: #555;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+            animation: fadeIn 1s ease 1.5s backwards;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #ffd6e8, #ffb3d9);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .gallery-caption {
+            text-align: center;
+            color: #d4407c;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .timeline {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease 2s backwards;
+        }
+
+        .timeline h2 {
+            color: #d4407c;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        .timeline-item {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ff69b4;
+            padding-left: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            background: #fff5fa;
+            border-radius: 10px;
+        }
+
+        .timeline-date {
+            color: #d4407c;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .love-message, .timeline, .countdown {
+                padding: 30px 20px;
+            }
+        }
