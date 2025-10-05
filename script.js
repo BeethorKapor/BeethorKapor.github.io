@@ -17,7 +17,7 @@
         function calculateAge() {
             const birthDate = new Date('2002-10-05'); // 2 ตุลาคม 2545
             const today = new Date();
-            const thisYearBirthday = new Date(today.getFullYear(), 9, 5, 0, 0, 0); // เดือน 10 = index 9, วันที่ 2, เวลา 10:00
+            const thisYearBirthday = new Date(today.getFullYear(), 9, 5, 20,40, 0); // เดือน 10 = index 9, วันที่ 2, เวลา 10:00
             
             let age = today.getFullYear() - birthDate.getFullYear();
             
@@ -42,7 +42,7 @@
         // นับถอยหลัง
         let previousDiff = null;
         function updateCountdown() {
-            const birthday = new Date('2025-10-05T00:00:00');
+            const birthday = new Date('2025-10-05T20:40:00');
             const now = new Date();
             const diff = birthday - now;
 
